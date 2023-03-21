@@ -13,7 +13,7 @@ function setUp() {
             let td = document.createElement('td')
             let txt = document.createElement('p')
             txt.id = String(j) + String(i)
-            txt.innerText = '　　'
+            txt.innerText = ''
             td.appendChild(txt)
             tr.appendChild(td)
         }
