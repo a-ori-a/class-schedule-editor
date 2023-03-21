@@ -42,10 +42,10 @@ function setUp() {
 
 function collectData() {
     let classes = []
-    for (let i=0;i<7;i++) {
+    for (let i=0;i<12;i++) {
         let today = []
-        for (let j=0;j<12;j++) {
-            let p = document.getElementById(String(j) + String(i))
+        for (let j=0;j<7;j++) {
+            let p = document.getElementById(String(i) + String(j))
             today.push(p.innerText)
         }
         classes.push(today)
