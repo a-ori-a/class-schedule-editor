@@ -21,7 +21,7 @@ function setUp() {
         table.appendChild(tr)
     }
 
-    let subjs = ['現文', '古典', '数B', '数Ⅲ', 'コ英', '英表', '化学', '生物', '物理', '地理', '　　']
+    let subjs = ['現文', '古典', '数B', '数Ⅲ', 'コ英', '英表', '化学', '生物', '物理', '世史','日史','地理', '保健', '体育', '　　']
     for (let i of subjs) {
         let button = document.createElement('input')
         button.type = 'button'
