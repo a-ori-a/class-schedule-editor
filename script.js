@@ -26,7 +26,7 @@ function setUp() {
         let button = document.createElement('input')
         button.type = 'button'
         button.value = i
-        button.onclick = 'set()'
+        button.onclick = set
         choice.appendChild(button)
     }
 }
