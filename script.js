@@ -52,6 +52,7 @@ function collectData() {
     }
     console.log(classes)
     navigator.clipboard.writeText(JSON.stringify(classes))
+    document.getElementById('getData').value = '時間割がコピーされました'
 }
 
 
