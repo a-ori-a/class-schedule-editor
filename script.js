@@ -13,7 +13,7 @@ function setUp() {
             let td = document.createElement('td')
             let txt = document.createElement('p')
             txt.id = String(j) + String(i)
-            txt.innerText = txt.id
+            txt.innerText = '　　'
             td.appendChild(txt)
             tr.appendChild(td)
         }
@@ -21,12 +21,21 @@ function setUp() {
         table.appendChild(tr)
     }
 
-    let subjs = ['現文', '古典', '数B', '数Ⅲ', 'コ英', '英表', '化学', '生物', '物理', '地理']
+    let subjs = ['現文', '古典', '数B', '数Ⅲ', 'コ英', '英表', '化学', '生物', '物理', '地理', '　　']
     for (let i of subjs) {
         let button = document.createElement('input')
         button.type = 'button'
         button.value = i
-        button.onclick = set
+        button.addEventListener('click', 
+        function (event) {
+            let obj = event.target
+            let edit = document.getElementById(String(day)+String(number))
+            edit.innerText = obj.value
+            if (number == 6) {
+                day += 1
+            }
+            number = (number+1) % 7
+        })
         choice.appendChild(button)
     }
 }
@@ -41,14 +50,8 @@ function collectData() {
         }
         classes.push(today)
     }
-    // alert(classes)
     console.log(classes)
-    return classes
 }
 
-function set() {
-    console.log('aaa')
-}
 
 setUp()
-collectData()
