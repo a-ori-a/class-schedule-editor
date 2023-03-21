@@ -1,0 +1,50 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    background-color: #12abab;
+}
+
+.description {
+    width: 700px;
+    margin: 10px auto;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.indicator {
+    width: 700px;
+    margin: 20px auto;
+}
+
+.subjects {
+    position: sticky;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #8a8479;
+    align-content: center;
+}
+
+.subjects input {
+    width: 100px;
+    margin: auto 5px;
+    padding: 5px;
+    border: 3px solid #f9ffce;
+    background-color: #b4b2ad;
+}
+
+th,td {
+    padding: 5px 12px;
+}

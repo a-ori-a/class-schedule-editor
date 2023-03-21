@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>時間割エディター</title>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            時間割エディター
+        </h1>
+    </div>
+    <div class="description">
+        <ul>
+            <li>時間割ウィジェットで使用する時間割のデータを編集することができます</li>
+            <li>下に表示されているボタンを押すことで真ん中に表示されている時間割表に値を入力することができます</li>
+            <li>とりあえずA週月曜日の1時間目の教科のボタンを押した後に、2時間目の教科のボタンを押してみてください。使い方がだいたいわかると思います。</li>
+        </ul>
+    </div>
+    <div class="indicator">
+        <table id="list" border="1">
+            <tr>
+                <th>A月</th>
+                <th>A火</th>
+                <th>A水</th>
+                <th>A木</th>
+                <th>A金</th>
+                <th>A土</th>
+                <th>B月</th>
+                <th>B火</th>
+                <th>B水</th>
+                <th>B木</th>
+                <th>B金</th>
+                <th>B土</th>
+            </tr>
+        </table>
+    </div>
+    <div class="subjects" id="choice">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
