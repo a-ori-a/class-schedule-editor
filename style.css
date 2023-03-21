@@ -27,8 +27,12 @@ ul {
     margin: 20px auto;
 }
 
+.spacer {
+    height: 100px;
+}
+
 .subjects {
-    position: sticky;
+    position: fixed;
     display: flex;
     bottom: 0;
     width: 100%;
@@ -39,7 +43,7 @@ ul {
 
 .subjects input {
     width: 100px;
-    margin: auto 5px;
+    margin: auto auto+5px;
     padding: 5px;
     border: 3px solid #f9ffce;
     background-color: #b4b2ad;
