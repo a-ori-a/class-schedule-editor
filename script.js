@@ -1,6 +1,9 @@
 const table = document.getElementById('list')
 const choice = document.getElementById('choice')
 
+var day = 0
+var number = 0
+
 function setUp() {
     for (let i=0;i<7;i++) {
 
@@ -23,7 +26,7 @@ function setUp() {
         let button = document.createElement('input')
         button.type = 'button'
         button.value = i
-        button.onclick = 'set'
+        button.onclick = 'set()'
         choice.appendChild(button)
     }
 }
@@ -41,6 +44,10 @@ function collectData() {
     // alert(classes)
     console.log(classes)
     return classes
+}
+
+function set() {
+    console.log('aaa')
 }
 
 setUp()
