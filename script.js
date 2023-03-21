@@ -51,6 +51,7 @@ function collectData() {
         classes.push(today)
     }
     console.log(classes)
+    navigator.clipboard.writeText(JSON.stringify(classes))
 }
 
 
