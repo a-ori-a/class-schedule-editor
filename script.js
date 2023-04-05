@@ -13,7 +13,7 @@ function setUp() {
             let td = document.createElement('td')
             let txt = document.createElement('p')
             txt.id = String(j) + String(i)
-            txt.innerText = ''
+            txt.innerText = '____'
             td.appendChild(txt)
             tr.appendChild(td)
         }
@@ -21,7 +21,7 @@ function setUp() {
         table.appendChild(tr)
     }
 
-    let subjs = ['現文', '古典', '数B', '数Ⅲ', 'コ英', '英表', '化学', '生物', '物理', '世史','日史','地理', '保健', '体育', '　　']
+    let subjs = ['現文', '古典', '数①', '数②', '情報', 'コ英', '英表', '化学', '生物', '物理', '世史','日史','地理', '体育', 'LHR', '探究', '英語', '国語', '数学', '　　']
     for (let i of subjs) {
         let button = document.createElement('input')
         button.type = 'button'
@@ -48,6 +48,9 @@ function collectData() {
             let p = document.getElementById(String(i) + String(j))
             today.push(p.innerText)
         }
+        if ([0, 6].includes(i)) {
+          classes.push([])
+        }
         classes.push(today)
     }
     console.log(classes)
@@ -55,5 +58,16 @@ function collectData() {
     document.getElementById('getData').value = '時間割がコピーされました'
 }
 
+document.documentElement.addEventListener('touchstart', function (e) {
+  if (e.touches.length >= 2) {e.preventDefault();}
+  }, {passive: false});
+  var t = 0;
+  document.documentElement.addEventListener('touchend', function (e) {
+  var now = new Date().getTime();
+  if ((now - t) < 350){
+    e.preventDefault();
+  }
+  t = now;
+  }, false);
 
 setUp()
