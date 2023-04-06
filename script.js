@@ -12,8 +12,9 @@ function setUp() {
         for (let j=0;j<12;j++) {
             let td = document.createElement('td')
             let txt = document.createElement('p')
+            txt.contentEditable = true
             txt.id = String(j) + String(i)
-            txt.innerText = '____'
+            txt.innerText = ''
             td.appendChild(txt)
             tr.appendChild(td)
         }
